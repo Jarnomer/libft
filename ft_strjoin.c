@@ -14,16 +14,16 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*new;
-	int		bff;
+	char	*str;
+	int		buffer_size;
 
 	if (!s1 || !s2)
 		return (NULL);
-	bff = ft_strlen(s1) + ft_strlen(s2) + 1;
-	new = ft_calloc(bff, sizeof(char));
-	if (!new)
+	buffer_size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	str = ft_calloc(buffer_size, sizeof(char));
+	if (!str)
 		return (NULL);
-	ft_strlcat(new, s1, bff);
-	ft_strlcat(new, s2, bff);
-	return (new);
+	ft_strlcat(str, s1, buffer_size);
+	ft_strlcat(str, s2, buffer_size);
+	return (str);
 }

@@ -12,66 +12,65 @@
 
 #include "libft.h"
 
-static char	**st_mem_cln(char **arr, int wrd)
+static char	**st_free_exit(char **arr, int current)
 {
-	while (--wrd >= 0)
-		free(arr[wrd]);
+	while (--current >= 0)
+		free(arr[current]);
 	free(arr);
 	return (NULL);
 }
 
-static char	**st_fll_arr(char **arr, char const *s, char c, int cnt)
+static char	**st_fill_array(char **arr, char const *s, char c, int count)
 {
-	int	stt;
+	int	start;
 	int	end;
-	int	wrd;
+	int	current;
 
-	wrd = 0;
 	end = 0;
-	while (wrd < cnt)
+	current = 0;
+	while (current < count)
 	{
 		while (s[end] == c)
 			++end;
-		stt = end;
+		start = end;
 		while (s[end] && s[end] != c)
 			++end;
-		arr[wrd] = ft_substr(s, stt, end - stt);
-		if (!arr[wrd])
-			return (st_mem_cln(arr, wrd));
+		arr[current] = ft_substr(s, start, end - start);
+		if (!arr[current])
+			return (st_free_exit(arr, current));
 		++end;
-		++wrd;
+		++current;
 	}
-	arr[cnt] = NULL;
 	return (arr);
 }
 
-static int	st_wrd_cnt(char const *s, char c)
+static int	st_word_count(char const *s, char c)
 {
-	int	cnt;
+	int	count;
 
-	cnt = 0;
+	count = 0;
 	while (*s)
 	{
 		while (*s == c)
 			++s;
 		if (*s)
-			++cnt;
+			++count;
 		while (*s && *s != c)
 			++s;
 	}
-	return (cnt);
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	int		cnt;
+	int		count;
 
 	if (!s)
 		return (NULL);
-	cnt = st_wrd_cnt(s, c);
-	arr = malloc(sizeof(char *) * (cnt + 1));
+	count = st_word_count(s, c);
+	arr = ft_calloc(count + 1, sizeof(char *));
 	if (!arr)
 		return (NULL);
-	return (st_fll_arr(arr, s, c, cnt));
+	return (st_fill_array(arr, s, c, count));
 }

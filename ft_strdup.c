@@ -14,12 +14,12 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*new;
-	int		ln;
+	char	*str;
+	int		len;
 
-	ln = ft_strlen(s1) + 1;
-	new = ft_calloc(ln, sizeof(char));
-	if (new)
-		ft_strlcpy(new, s1, ln);
-	return (new);
+	len = ft_strlen(s1) + 1;
+	str = ft_calloc(len, sizeof(char));
+	if (str)
+		ft_strlcpy(str, s1, len);
+	return (str);
 }

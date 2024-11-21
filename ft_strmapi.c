@@ -14,19 +14,19 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*new;
+	char			*str;
 	unsigned int	i;
 
 	if (!s || !f)
 		return (NULL);
-	new = ft_calloc(ft_strlen(s) + 1, sizeof(char));
-	if (!new)
+	str = ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (!str)
 		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		new[i] = f(i, s[i]);
+		str[i] = f(i, s[i]);
 		++i;
 	}
-	return (new);
+	return (str);
 }

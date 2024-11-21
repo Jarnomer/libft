@@ -78,16 +78,18 @@ OBJS_BNS = $(SRCS_BNS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) | $(BUILDDIR)
 	@$(AR) $(NAME) $(OBJS)
 	@echo "Building binary..."
 
 clean:
-	$(RM) $(OBJS) $(OBJS_BNS)
+	@$(RM) $(OBJS) $(OBJS_BNS)
+	@echo "Removing objects..."
 	@$(RM) .bonus
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "Removing binary..."
 
 bonus: .bonus
 

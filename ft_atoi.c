@@ -15,21 +15,21 @@
 int	ft_atoi(const char *str)
 {
 	size_t	num;
-	int		sgn;
+	int		sign;
 
 	num = 0;
-	sgn = 1;
+	sign = 1;
 	while ((*str >= 9 && *str <= 13) || *str == ' ')
 		++str;
 	if (*str == '-' || *str == '+')
-		sgn = ',' - *str++;
+		sign = ',' - *str++;
 	while (ft_isdigit(*str))
 	{
 		num = num * 10 + *str++ - '0';
-		if (num > LONG_MAX && sgn < 0)
+		if (num > LONG_MAX && sign < 0)
 			return (0);
-		else if (num > LONG_MAX && sgn > 0)
+		else if (num > LONG_MAX && sign > 0)
 			return (-1);
 	}
-	return ((int)num * sgn);
+	return ((int)num * sign);
 }

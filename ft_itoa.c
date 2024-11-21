@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-static void	st_fll_str(char *str, int n, int len)
+static void	st_fill_buffer(char *str, int n, int len)
 {
 	if (n < 0)
 	{
 		*str = '-';
-		n *= -1;
+		n = -n;
 	}
 	while (n != 0)
 	{
@@ -27,31 +27,31 @@ static void	st_fll_str(char *str, int n, int len)
 	}
 }
 
-static int	st_get_bff(int n)
+static int	st_get_buffer_size(int n)
 {
-	int	bff;
+	int	buffer_size;
 
-	bff = (n == 0) + (n < 0);
+	buffer_size = (n == 0) + (n < 0);
 	while (n != 0)
 	{
 		n /= 10;
-		++bff;
+		++buffer_size;
 	}
-	return (bff);
+	return (buffer_size);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*new;
-	int		bff;
+	char	*str;
+	int		buffer_size;
 
 	if (n == 0)
 		return (ft_strdup("0"));
 	else if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
-	bff = st_get_bff(n);
-	new = ft_calloc(bff + 1, sizeof(char));
-	if (new)
-		st_fll_str(new, n, bff);
-	return (new);
+	buffer_size = st_get_buffer_size(n);
+	str = ft_calloc(buffer_size + 1, sizeof(char));
+	if (str)
+		st_fill_buffer(str, n, buffer_size);
+	return (str);
 }
