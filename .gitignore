@@ -1,0 +1,9 @@
+.bonus
+*build
+*mxl
+*.vscode
+*.log
+*.pdf
+*.txt
+*.sh
+*.a
