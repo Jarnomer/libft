@@ -20,7 +20,7 @@
 
 ## ⚠️ Notice
 
-`main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject.
+`Main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject.
 
 If you want to see the version used for evaluation, check `eval` branch.
 
@@ -46,7 +46,7 @@ git clone https://github.com/Jarnomer/libft.git libft
 
 ## ⚡ Usage
 
-Build creates binary `libft.a` into `root` directory and should be `compiled` with your projects.
+Build creates binary `libft.a` into `root` directory and it should be `compiled` with your projects.
 
 ```c
 #include "./include/libft.h"
@@ -55,7 +55,7 @@ Build creates binary `libft.a` into `root` directory and should be `compiled` wi
 
 int main(void)
 {
-  char *str1 = "Hello";
+  char *str1 = "Hello ";
   char *str2 = "world!";
   char *result;
 
