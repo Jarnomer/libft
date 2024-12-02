@@ -28,9 +28,9 @@ If you want to see the version used of evaluation, check `eval` branch.
 
 Library includes mainly a selection of replicated `Libc` functions.
 
-It is complemented by `additional`, mostly `string` and `print` focused functions.
+It is complemented by `additional`, mostly `string` and `print` based functionality.
 
-`Bonus` is centered around `linked list` are found combined into the library.
+`Bonus` is centered around `linked list` are found combined into the library as well.
 
 [ft_printf](https://github.com/Jarnomer/printf) and [gnl](https://github.com/Jarnomer/gnl) are also integrated alongside other `extras`.
 
@@ -51,10 +51,25 @@ After building the project `libft.a` is created under `root` directory.
 In order to use library functions it must be compiled in company with your `main`.
 
 ```bash
-cc main.c libft.a -o my_program
+cc main.c libft.a -o my_program_name
 ```
 
 Usually library functions reside in their `separate` folder.
+
+```bash
+all: $(NAME)
+
+$(NAME): $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) $(LIBFTDIR)/$(LIBFTBIN) -o $(NAME)
+	printf "$(V)$(B)Binary:$(T)$(Y) $(NAME) $(T)\n"
+
+$(OBJECTS): $(LIBFTDIR)/$(LIBFTBIN)
+
+libft: $(LIBFTDIR)/$(LIBFTBIN)
+
+$(LIBFTDIR)/$(LIBFTBIN): 
+	@make -C $(LIBFTDIR) all
+```
 
 ## 🚀 Functions
 
