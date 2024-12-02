@@ -14,6 +14,10 @@
   <img src="https://img.shields.io/github/directory-file-count/Jarnomer/libft/sources?style=for-the-badge&color=pink" alt="GitHub repo file or directory count (in path)">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/Jarnomer/libft/main?style=for-the-badge&color=red" alt="GitHub last commit (branch)">
+</p>
+
 ## ⚠️ Notice
 
 `main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject.
