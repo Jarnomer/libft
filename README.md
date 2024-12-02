@@ -30,9 +30,9 @@ Library includes mainly a selection of replicated `Libc` functions.
 
 It is complemented by `additional`, mostly `string` and `print` based functionality.
 
-`Bonus` is centered around `linked list` are found combined into the library as well.
+`Bonus` which is centered around `linked lists` is integrated into the library as well.
 
-[ft_printf](https://github.com/Jarnomer/printf) and [gnl](https://github.com/Jarnomer/gnl) are also integrated alongside other `extras`.
+[ft_printf](https://github.com/Jarnomer/printf) and [gnl](https://github.com/Jarnomer/gnl) are also combined alongside other `extra` functions.
 
 Project `passes` many of the 42 `testers`, including Franzinette `strict`.
 
@@ -46,7 +46,7 @@ git clone https://github.com/Jarnomer/libft.git libft
 
 ## ⚡ Usage
 
-After building the project `libft.a` is created under `root` directory.
+Building the projet create `libft.a` under the `root` directory and.
 
 In order to use library functions it must be compiled in company with your `main`.
 
@@ -54,7 +54,7 @@ In order to use library functions it must be compiled in company with your `main
 cc main.c libft.a -o my_program_name
 ```
 
-Usually library functions reside in their `separate` folder.
+Usually library functions reside in their own `separate` folder. Here is an example how to implement `libft` into your 42 projects.
 
 ```bash
 $(NAME): $(OBJECTS)
