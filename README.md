@@ -46,20 +46,35 @@ git clone https://github.com/Jarnomer/libft.git libft
 
 ## ⚡ Usage
 
-Building the projet create `libft.a` under the `root` directory and.
+Building creates binary `libft.a` into `root` directory and can be compiled with your projects.
 
-In order to use library functions it must be compiled in company with your `main`.
+```c
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+  char *str1 = "Hello";
+  char *str2 = "world!";
+  char *result;
+
+  result = ft_strjoin(str1, str2);
+  printf("Result: %s\n", result);
+  free(result);
+  return (0);
+}
+```
 
 ```bash
 cc main.c libft.a -o my_program_name
 ```
 
-Usually library functions reside in their own `separate` folder. Here is an example how to implement `libft` into your 42 projects.
+Here is an example how to implement `libft` into your `Makefile`.
 
 ```bash
 $(NAME): $(OBJECTS)
-  $(CC) $(CFLAGS) $(OBJECTS) $(LIBFTDIR)/$(LIBFTBIN) -o $(NAME)
-  printf "Successfully compiled binary: $(NAME)\n"
+  $(CC) $(CFLAGS) $^ $(LIBFTDIR)/$(LIBFTBIN) -o $@
 
 $(OBJECTS): $(LIBFTDIR)/$(LIBFTBIN)
 
