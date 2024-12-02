@@ -9,11 +9,12 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Solo-violet?style=for-the-badge" alt="solo">
   <img src="https://img.shields.io/badge/Score-125%2F100-lightgreen?style=for-the-badge" alt="score">
-	<img src="https://img.shields.io/github/languages/code-size/Jarnomer/libft?style=for-the-badge&color=lightyellow" alt="GitHub code size in bytes">
   <img src="https://img.shields.io/github/languages/top/Jarnomer/libft?style=for-the-badge&logo=c&label=%20&labelColor=gray&color=lightblue" alt="GitHub top language">
+	<img src="https://img.shields.io/github/languages/code-size/Jarnomer/libft?style=for-the-badge&color=lightyellow" alt="GitHub code size in bytes">
+  <img src="https://img.shields.io/github/directory-file-count/Jarnomer/libft?style=for-the-badge&color=lightred" alt="GitHub code size in bytes">
 </p>
 
-## ⚠️ Important
+## ⚠️ Notice
 
 `main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject.
 
@@ -27,7 +28,9 @@ It is complemented by `additional`, mainly `string` focused functions.
 
 `Bonus` is centered around `linked list`.
 
-As `extra` functions
+As `extra` functions [ft_printf](https://github.com/Jarnomer/Hive42)
+
+Project `passes` many of the 42 `testers`, including Franzinette `strict`.
 
 ## 🛠️ Build
 
@@ -88,7 +91,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 
 ## ♻️ Resources
 
-Project `passes` many of the 42 `testers`, including Franzinette `strict`.
+[franzinette](https://github.com/WaRtr0/francinette-image) amazing unit test framework for libft and other 42 projects.
 
 ## 4️⃣2️⃣ Footer
 
