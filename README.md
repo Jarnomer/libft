@@ -42,7 +42,7 @@ git clone https://github.com/Jarnomer/libft.git libft
 
 ## ⚡ Usage
 
-whatever
+whatever this is
 
 ## 🚀 Functions
 
