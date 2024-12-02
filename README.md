@@ -22,7 +22,7 @@
 
 `main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject.
 
-If you want to see the version used of evaluation, check `eval` branch.
+If you want to see the version used for evaluation, check `eval` branch.
 
 ## 📝 General
 
@@ -30,9 +30,9 @@ Library includes mainly a selection of replicated `Libc` functions.
 
 It is complemented by `additional`, mostly `string` and `print` based functionality.
 
-`Bonus` which is centered around `linked lists` is integrated into the library as well.
+`Bonus` which is centered around `linked lists` is also integrated into the library.
 
-[ft_printf](https://github.com/Jarnomer/printf) and [gnl](https://github.com/Jarnomer/gnl) are also combined alongside other `extra` functions.
+[ft_printf](https://github.com/Jarnomer/printf) and [gnl](https://github.com/Jarnomer/gnl) are combined as well alongside other `extra` functions.
 
 Project `passes` many of the 42 `testers`, including Franzinette `strict`.
 
@@ -46,10 +46,10 @@ git clone https://github.com/Jarnomer/libft.git libft
 
 ## ⚡ Usage
 
-Building creates binary `libft.a` into `root` directory and can be compiled with your projects.
+Build creates binary `libft.a` into `root` directory and should be `compiled` with your projects.
 
 ```c
-#include "libft.h"
+#include "./include/libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -67,7 +67,7 @@ int main(void)
 ```
 
 ```bash
-cc main.c libft.a -o my_program_name
+cc main.c libft.a -o my_program
 ```
 
 Here is an example how to implement `libft` into your `Makefile`.
