@@ -57,18 +57,14 @@ cc main.c libft.a -o my_program_name
 Usually library functions reside in their `separate` folder.
 
 ```bash
-all: $(NAME)
-
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) $(LIBFTDIR)/$(LIBFTBIN) -o $(NAME)
-	printf "$(V)$(B)Binary:$(T)$(Y) $(NAME) $(T)\n"
+  $(CC) $(CFLAGS) $(OBJECTS) $(LIBFTDIR)/$(LIBFTBIN) -o $(NAME)
+  printf "Successfully compiled binary: $(NAME)\n"
 
 $(OBJECTS): $(LIBFTDIR)/$(LIBFTBIN)
 
-libft: $(LIBFTDIR)/$(LIBFTBIN)
-
 $(LIBFTDIR)/$(LIBFTBIN): 
-	@make -C $(LIBFTDIR) all
+  @make -C $(LIBFTDIR) all
 ```
 
 ## 🚀 Functions
@@ -99,7 +95,6 @@ Here is the table of all functions.
 | `ft_strrchr`          |                       |                          |                        |
 | `ft_tolower`          |                       |                          |                        |
 | `ft_toupper`          |                       |                          |                        |
-
 
 Each function is relying on each other when applicable.
 
