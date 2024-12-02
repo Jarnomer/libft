@@ -15,33 +15,27 @@
 
 ## ⚠️ Important
 
-`main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original.
+`main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject.
 
 If you want to see the version used of evaluation, check `eval` branch.
 
 ## 📝 General
 
-`Libft` is focused on creating personal function library in C.
+Library includes a selection of replicated `Libc` functions aimed to be used in upcoming [42 projects](https://github.com/Jarnomer/Hive42).
 
-The library includes a selection of replicated `Libc` functions aimed to be used in upcoming 42 projects.
+It is complemented by `additional`, mainly `string` focused functions.
 
-It is completed with `additional`, mainly string focused functions. `Bonus` is centered around `linked list`.
+`Bonus` is centered around `linked list`.
 
-Project `passes` many of the 42 `testers`, including Franzinette `strict`.
-
+As `extra` functions
 
 ## 🛠️ Build
 
 GNU `make` and `gcc` are required to build and compile the project.
 
 ```bash
-git clone --recurse-submodules https://github.com/Jarnomer/push_swap.git push_swap
+git clone https://github.com/Jarnomer/libft.git libft
 ```
-
-
-For other information, please refer the main page.
-
-
 
 ## 🚀 Functions
 
@@ -92,10 +86,14 @@ char *ft_strjoin(char const *s1, char const *s2)
 }
 ```
 
-Mandatory part combines Libc and additional functions, these are located in `sources` folder.
+## ♻️ Resources
 
-Header is in includes, `-I` is used in `Makefile` to allow include `<libft.h>` instead of `"libft.h"`.
+Project `passes` many of the 42 `testers`, including Franzinette `strict`.
 
-Bonuses are located in their own `bonus` directory under `sources` and they use `shared` header file.
+## 4️⃣2️⃣ Footer
+
+For my other 42 project and general information, please refer the [landing page](https://github.com/Jarnomer/Hive42).
+
+I have also created error handling [unit testers](https://github.com/Jarnomer/Hive42) for `pipex`, `so_long` and `cub3d`.
 
 ### Cheers and good luck! 🥳
