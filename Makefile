@@ -20,7 +20,6 @@ SOURCEDIR := sources
 HEADERDIR := include
 BUILDDIR  := build
 BUILDLOG  := build.log
-BONUSFLAG := .bonus
 
 # **************************************************************************** #
 #    COMMANDS
@@ -33,17 +32,14 @@ AR := ar -rcs
 #    COMPILATION
 # **************************************************************************** #
 
-CC         := cc
-CFLAGS     := -Wall -Werror -Wextra
-CPPFLAGS   := -c -MMD -MP
-DEBUGFLAGS := -g -fsanitize=address
-MAKEFLAGS  += --no-print-directory -j4
+CC        := cc
+CFLAGS    := -Wall -Werror -Wextra
+CPPFLAGS  := -c -MMD -MP
+MAKEFLAGS += --no-print-directory -j4
 
 # **************************************************************************** #
 #    SOURCES
 # **************************************************************************** #
-
-MODULES := bonus
 
 SOURCES := ft_isalpha.c \
            ft_isdigit.c \
@@ -79,26 +75,30 @@ SOURCES := ft_isalpha.c \
            ft_putstr_fd.c \
            ft_putendl_fd.c \
            ft_putnbr_fd.c \
-
-SOURCES_BONUS =	ft_lstnew_bonus.c \
-                ft_lstadd_front_bonus.c \
-                ft_lstsize_bonus.c \
-                ft_lstlast_bonus.c \
-                ft_lstadd_back_bonus.c \
-                ft_lstdelone_bonus.c \
-                ft_lstclear_bonus.c \
-                ft_lstiter_bonus.c \
-                ft_lstmap_bonus.c
+           ft_lstnew.c \
+           ft_lstadd_front.c \
+           ft_lstsize.c \
+           ft_lstlast.c \
+           ft_lstadd_back.c \
+           ft_lstdelone.c \
+           ft_lstclear.c \
+           ft_lstiter.c \
+           ft_lstmap.c \
+           ft_printf.c \
+           ft_printf_fmt.c \
+           ft_gnl.c \
+           ft_gnl_utils.c \
+           ft_free_single.c \
+           ft_free_double.c \
+           ft_strcmp.c \
+           ft_isspace.c \
+           ft_issign.c
 
 OBJECTS := $(addprefix $(BUILDDIR)/, $(SOURCES:.c=.o))
 
-OBJECTS_BONUS = $(addprefix $(BUILDDIR)/, $(SOURCES_BONUS:.c=.o))
-
-SOURCEDIR += $(addprefix $(SOURCEDIR)/, $(MODULES))
-
 INCS := $(addprefix -I, $(HEADERDIR))
 
-DEPS := $(OBJECTS:.o=.d) $(OBJECTS_BONUS:.o=.d)
+DEPS := $(OBJECTS:.o=.d)
 
 vpath %.c $(SOURCEDIR)
 
@@ -112,22 +112,8 @@ $(NAME): $(OBJECTS)
 	@$(AR) $(NAME) $^
 	printf "$(V)$(B)Binary:$(T)$(Y) $(NAME) $(T)\n"
 
-bonus: $(BONUSFLAG)
-
-$(BONUSFLAG): $(OBJECTS) $(OBJECTS_BONUS)
-	@$(AR) $(NAME) $^
-	printf "$(V)$(B)Binary:$(T)$(Y) $(NAME) $(T)\n"
-	@touch $(BONUSFLAG)
-
 re: fclean
 	make all
-
-debug: CFLAGS += $(DEBUGFLAGS)
-debug: re
-
-nm:
-	@$(foreach h, $(HEADERDIR), norminette -R CheckDefine $(h))
-	@$(foreach s, $(SOURCEDIR), norminette -R CheckForbiddenSourceHeader $(s))
 
 # **************************************************************************** #
 #    BUILD
@@ -151,7 +137,6 @@ endef
 
 clean:
 	$(call delete_cmd, $(BUILDDIR), $(BUILDLOG))
-	@$(RM) $(BONUSFLAG)
 
 fclean: clean
 	$(call delete_cmd, $(NAME))
@@ -189,7 +174,6 @@ $(foreach build, $(BUILDDIR), $(eval $(call build_cmd, $(build))))
 # **************************************************************************** #
 
 .PHONY: all bonus re
-.PHONY: debug nm
 .PHONY: clean fclean
 
 .SILENT:

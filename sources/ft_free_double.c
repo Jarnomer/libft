@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmertane <jmertane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 16:33:34 by jmertane          #+#    #+#             */
-/*   Updated: 2023/11/12 11:32:04 by jmertane         ###   ########.fr       */
+/*   Created: 2023/11/08 15:41:06 by jmertane          #+#    #+#             */
+/*   Updated: 2023/11/16 14:55:41 by jmertane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_putchar_fd(char c, int fd)
+void	ft_free_double(void ***arr)
 {
-	return (write(fd, &c, 1));
+	int	i;
+
+	if (!arr || !*arr)
+		return ;
+	i = 0;
+	while ((*arr)[i])
+	{
+		free((*arr)[i]);
+		(*arr)[i] = NULL;
+		i++;
+	}
+	free(*arr);
+	*arr = NULL;
 }

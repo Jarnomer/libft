@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_issign.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmertane <jmertane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 16:33:34 by jmertane          #+#    #+#             */
-/*   Updated: 2023/11/12 11:32:04 by jmertane         ###   ########.fr       */
+/*   Created: 2023/11/08 15:27:15 by jmertane          #+#    #+#             */
+/*   Updated: 2023/11/26 10:48:37 by jmertane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_putchar_fd(char c, int fd)
+int	ft_issign(int c)
 {
-	return (write(fd, &c, 1));
+	return (c == '-' || c == '+');
 }

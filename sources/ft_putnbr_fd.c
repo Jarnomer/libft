@@ -6,22 +6,51 @@
 /*   By: jmertane <jmertane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:35:06 by jmertane          #+#    #+#             */
-/*   Updated: 2023/11/26 13:24:58 by jmertane         ###   ########.fr       */
+/*   Updated: 2024/02/08 16:31:58 by jmertane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_putnbr_fd(int n, int fd)
+static long	st_get_devider(long n)
 {
-	if (n == INT_MIN)
-		return (void)(ft_putstr_fd("-2147483648", fd));
-	else if (n < 0)
+	long	div;
+	int		i;
+
+	i = 0;
+	div = 1;
+	if (n < 0)
+		div *= -1;
+	while (n != 0)
 	{
-		ft_putchar_fd('-', fd);
-		n = -n;
+		n /= 10;
+		i++;
 	}
-	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd(n % 10 + '0', fd);
+	while (--i > 0)
+		div *= 10;
+	return (div);
+}
+
+int	ft_putnbr_fd(long n, int fd)
+{
+	long	div;
+	int		len;
+
+	len = 0;
+	if (n < 0)
+	{
+		if (ft_putchar_fd('-', fd) == -1)
+			return (-1);
+		len++;
+	}
+	div = st_get_devider(n);
+	while (div != 0)
+	{
+		if (ft_putchar_fd(n / div + '0', fd) == -1)
+			return (-1);
+		n %= div;
+		div /= 10;
+		len++;
+	}
+	return (len);
 }

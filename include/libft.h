@@ -13,6 +13,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <ft_printf.h>
+# include <get_next_line.h>
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
@@ -33,6 +36,8 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
+int		ft_issign(int c);
 
 /* ************************************************************************** */
 /*                                 MEMORY                                     */
@@ -50,10 +55,10 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 /*                                  PRINT                                     */
 /* ************************************************************************** */
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putstr_fd(char *s, int fd);
+int		ft_putendl_fd(char *s, int fd);
+int		ft_putnbr_fd(long n, int fd);
 
 /* ************************************************************************** */
 /*                                 STRING                                     */
@@ -65,6 +70,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -79,7 +85,14 @@ int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
 
 /* ************************************************************************** */
-/*                                  BONUS                                     */
+/*                                   FREE                                     */
+/* ************************************************************************** */
+
+void	ft_free_single(void **ptr);
+void	ft_free_double(void ***arr);
+
+/* ************************************************************************** */
+/*                               LINKED LIST                                  */
 /* ************************************************************************** */
 
 t_list	*ft_lstnew(void *content);
