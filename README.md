@@ -38,7 +38,7 @@ Project `passes` many of the 42 `testers`, including Franzinette `strict`.
 
 ## 🛠️ Build
 
-GNU `make` and `gcc` are required to build and compile the project.
+GNU `make`, `gcc` nad `ar` are required to build, compile and archive the project.
 
 ```bash
 git clone https://github.com/Jarnomer/libft.git libft
@@ -46,7 +46,15 @@ git clone https://github.com/Jarnomer/libft.git libft
 
 ## ⚡ Usage
 
-whatever this is
+After building the project `libft.a` is created under `root` directory.
+
+In order to use library functions it must be compiled in company with your `main`.
+
+```bash
+cc main.c libft.a -o my_program
+```
+
+Usually library functions reside in their `separate` folder.
 
 ## 🚀 Functions
 
