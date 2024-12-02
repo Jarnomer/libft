@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-	<b><i>Personalized function library based on standard 🇨 library</i></b><br>
+	<b><i>Personalized function library based on standard 🇨 library.</i></b><br>
 </p>
 
 <p align="center">
@@ -13,41 +13,39 @@
   <img src="https://img.shields.io/github/languages/top/Jarnomer/libft?style=for-the-badge&logo=c&label=%20&labelColor=gray&color=lightblue" alt="GitHub top language">
 </p>
 
-## General
+## ⚠️ Important
+
+`main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original.
+
+If you want to see the version used of evaluation, check `eval` branch.
+
+## 📝 General
 
 `Libft` is focused on creating personal function library in C.
 
-The library inludes a selection of replicated `Libc` functions aimed to be used in upcoming 42 projects.
+The library includes a selection of replicated `Libc` functions aimed to be used in upcoming 42 projects.
 
 It is completed with `additional`, mainly string focused functions. `Bonus` is centered around `linked list`.
 
 Project `passes` many of the 42 `testers`, including Franzinette `strict`.
 
-Build as a library and thus each function is relying on each other when applicable.
+
+## 🛠️ Build
+
+GNU `make` and `gcc` are required to build and compile the project.
+
+```bash
+git clone --recurse-submodules https://github.com/Jarnomer/push_swap.git push_swap
+```
+
 
 For other information, please refer the main page.
 
-```c
-char *ft_strjoin(char const *s1, char const *s2)
-{
-  char  *str;
-  int    buffer_size;
 
-  if (!s1 || !s2)
-    return (NULL);
-  buffer_size = ft_strlen(s1) + ft_strlen(s2) + 1;
-  str = ft_calloc(buffer_size, sizeof(char));
-  if (!str)
-    return (NULL);
-  ft_strlcat(str, s1, buffer_size);
-  ft_strlcat(str, s2, buffer_size);
-  return (str);
-}
-```
 
-## Functions
+## 🚀 Functions
 
-Here is the table of all functions, including bonus.
+Here is the table of all functions.
 
 | **Libc**              | **Additional**        | **Bonus**               |
 |------------------------|-----------------------|--------------------------|
@@ -73,6 +71,26 @@ Here is the table of all functions, including bonus.
 | `ft_strrchr`        |                       |                          |
 | `ft_tolower`        |                       |                          |
 | `ft_toupper`        |                       |                          |
+
+Each function is relying on each other when applicable.
+
+```c
+char *ft_strjoin(char const *s1, char const *s2)
+{
+  char  *str;
+  int    buffer_size;
+
+  if (!s1 || !s2)
+    return (NULL);
+  buffer_size = ft_strlen(s1) + ft_strlen(s2) + 1;
+  str = ft_calloc(buffer_size, sizeof(char));
+  if (!str)
+    return (NULL);
+  ft_strlcat(str, s1, buffer_size);
+  ft_strlcat(str, s2, buffer_size);
+  return (str);
+}
+```
 
 Mandatory part combines Libc and additional functions, these are located in `sources` folder.
 
