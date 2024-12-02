@@ -1,9 +1,9 @@
 <h1 align="center">
-  push_swap
+  <b>libft</b>
 </h1>
 
 <p align="center">
-	<b><i>Personal function library based on standard 🇨 library</i></b><br>
+	<b><i>Personalized function library based on standard 🇨 library</i></b><br>
 </p>
 
 <p align="center">
