@@ -34,7 +34,7 @@ It is complemented by `additional`, mostly `string` and `print` based functional
 
 [ft_printf](https://github.com/Jarnomer/printf) and [gnl](https://github.com/Jarnomer/gnl) are combined as well alongside other `extra` functions.
 
-Project `passes` many of the 42 `testers`, including Franzinette `strict`.
+Project `passes` many of the 42 `testers`, including [franzinette](https://github.com/xicodomingues/francinette) `strict`.
 
 ## 🛠️ Build
 
