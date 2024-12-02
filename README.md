@@ -1,6 +1,11 @@
-# libft
+<h1 align="center">
+  push_swap
+</h1>
 
-Standard 🇨 Library functions with added spicing 🌶️.
+<p align="center">
+	<b><i>Standard 🇨 Library functions with added spicing 🌶️.</i></b><br>
+</p>
+
 
 ## General
 
