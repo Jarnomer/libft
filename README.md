@@ -52,30 +52,31 @@ whatever this is
 
 Here is the table of all functions.
 
-| **Libc**              | **Additional**        | **Bonus**               |
-|------------------------|-----------------------|--------------------------|
-| `ft_atoi`           | `ft_itoa`          | `ft_lstadd_back`|
-| `ft_bzero`          | `ft_putchar_fd`    | `ft_lstadd_front`|
-| `ft_calloc`         | `ft_putendl_fd`    | `ft_lstclear`   |
-| `ft_isalnum`        | `ft_putnbr_fd`     | `ft_lstdelone`  |
-| `ft_isalpha`        | `ft_putstr_fd`     | `ft_lstiter`    |
-| `ft_isascii`        | `ft_split`         | `ft_lstlast`    |
-| `ft_isdigit`        | `ft_strdup`        | `ft_lstmap`     |
-| `ft_isprint`        | `ft_striteri`      | `ft_lstnew`     |
-| `ft_memchr`         | `ft_strjoin`       | `ft_lstsize`    |
-| `ft_memcmp`         | `ft_strmapi`       |                          |
-| `ft_memcpy`         | `ft_strtrim`       |                          |
-| `ft_memmove`        | `ft_substr`        |                          |
-| `ft_memset`         |                       |                          |
-| `ft_strchr`         |                       |                          |
-| `ft_strlcat`        |                       |                          |
-| `ft_strlcpy`        |                       |                          |
-| `ft_strlen`         |                       |                          |
-| `ft_strncmp`        |                       |                          |
-| `ft_strnstr`        |                       |                          |
-| `ft_strrchr`        |                       |                          |
-| `ft_tolower`        |                       |                          |
-| `ft_toupper`        |                       |                          |
+| **Libc**              | **Additional**        | **Bonus**               | **Extras**            |
+|------------------------|-----------------------|--------------------------|------------------------|
+| `ft_atoi`             | `ft_itoa`            | `ft_lstadd_back`        | `ft_printf`           |
+| `ft_bzero`            | `ft_putchar_fd`      | `ft_lstadd_front`       | `ft_printf_fmt`       |
+| `ft_calloc`           | `ft_putendl_fd`      | `ft_lstclear`           | `ft_gnl`              |
+| `ft_isalnum`          | `ft_putnbr_fd`       | `ft_lstdelone`          | `ft_gnl_utils`        |
+| `ft_isalpha`          | `ft_putstr_fd`       | `ft_lstiter`            | `ft_free_single`      |
+| `ft_isascii`          | `ft_split`           | `ft_lstlast`            | `ft_free_double`      |
+| `ft_isdigit`          | `ft_strdup`          | `ft_lstmap`             | `ft_strcmp`           |
+| `ft_isprint`          | `ft_striteri`        | `ft_lstnew`             | `ft_isspace`          |
+| `ft_memchr`           | `ft_strjoin`         | `ft_lstsize`            | `ft_issign`           |
+| `ft_memcmp`           | `ft_strmapi`         |                          |                        |
+| `ft_memcpy`           | `ft_strtrim`         |                          |                        |
+| `ft_memmove`          | `ft_substr`          |                          |                        |
+| `ft_memset`           |                       |                          |                        |
+| `ft_strchr`           |                       |                          |                        |
+| `ft_strlcat`          |                       |                          |                        |
+| `ft_strlcpy`          |                       |                          |                        |
+| `ft_strlen`           |                       |                          |                        |
+| `ft_strncmp`          |                       |                          |                        |
+| `ft_strnstr`          |                       |                          |                        |
+| `ft_strrchr`          |                       |                          |                        |
+| `ft_tolower`          |                       |                          |                        |
+| `ft_toupper`          |                       |                          |                        |
+
 
 Each function is relying on each other when applicable.
 
@@ -99,7 +100,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 
 ## ♻️ Resources
 
-[franzinette](https://github.com/WaRtr0/francinette-image) amazing unit test framework for libft and other 42 projects.
+[franzinette](https://github.com/xicodomingues/francinette) amazing unit test framework for libft and other 42 projects.
 
 ## 4️⃣2️⃣ Footer
 
