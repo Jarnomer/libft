@@ -22,13 +22,13 @@ If you want to see the version used of evaluation, check `eval` branch.
 
 ## 📝 General
 
-Library includes a selection of replicated `Libc` functions aimed to be used in upcoming [42 projects](https://github.com/Jarnomer/Hive42).
+Library includes mainly a selection of replicated `Libc` functions.
 
-It is complemented by `additional`, mainly `string` focused functions.
+It is complemented by `additional`, mostly `string` and `print` focused functions.
 
-`Bonus` is centered around `linked list`.
+`Bonus` is centered around `linked list` are found combined into the library.
 
-As `extra` functions [ft_printf](https://github.com/Jarnomer/Hive42)
+[ft_printf](https://github.com/Jarnomer/printf) and [gnl](https://github.com/Jarnomer/gnl) are also integrated alongside other `extras`.
 
 Project `passes` many of the 42 `testers`, including Franzinette `strict`.
 
@@ -39,6 +39,10 @@ GNU `make` and `gcc` are required to build and compile the project.
 ```bash
 git clone https://github.com/Jarnomer/libft.git libft
 ```
+
+## ⚡ Usage
+
+whatever
 
 ## 🚀 Functions
 
