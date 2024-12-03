@@ -55,6 +55,10 @@ GNU `make`, `gcc` nad `ar` are required to build, compile and archive the projec
 git clone https://github.com/Jarnomer/libft.git libft
 ```
 
+```bash
+cd libft && make all
+```
+
 ## ⚡ Usage
 
 Build creates binary `libft.a` into `root` directory and it should be `compiled` with your project.
