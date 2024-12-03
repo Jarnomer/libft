@@ -29,12 +29,6 @@
 
 </div>
 
-## ⚠️ Notice
-
-`Main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject.
-
-If you want to see the version used for school evaluation, check `eval` branch.
-
 ## 📝 General
 
 Library includes mainly a selection of replicated `Libc` functions.
@@ -46,6 +40,10 @@ It is complemented by `additional`, mostly `string` and `print` based functional
 [ft_printf](https://github.com/Jarnomer/ft_printf) and [gnl](https://github.com/Jarnomer/gnl) are combined to the project as well alongside other `extra` functions.
 
 Project `passes` many of the 42 `testers`, including [franzinette](https://github.com/xicodomingues/francinette) `strict`.
+
+⚠️ `Main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject. ⚠️
+
+If you want to see the version used for school evaluation, check `eval` branch.
 
 ## 🛠️ Build
 
