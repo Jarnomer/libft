@@ -22,7 +22,7 @@
 
 `Main` branch is shared between other [42 projects](https://github.com/Jarnomer/Hive42) and it is expanded from original subject.
 
-If you want to see the version used for evaluation, check `eval` branch.
+If you want to see the version used for school evaluation, check `eval` branch.
 
 ## 📝 General
 
@@ -46,12 +46,10 @@ git clone https://github.com/Jarnomer/libft.git libft
 
 ## ⚡ Usage
 
-Build creates binary `libft.a` into `root` directory and it should be `compiled` with your projects.
+Build creates binary `libft.a` into `root` directory and it should be `compiled` with your project.
 
 ```c
 #include "./include/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int main(void)
 {
@@ -60,8 +58,8 @@ int main(void)
   char *result;
 
   result = ft_strjoin(str1, str2);
-  printf("Result: %s\n", result);
-  free(result);
+  ft_printf("Result: %s\n", result);
+  ft_free_single(&result);
   return (0);
 }
 ```
@@ -77,6 +75,8 @@ $(NAME): $(OBJECTS)
   $(CC) $(CFLAGS) $^ $(LIBFTDIR)/$(LIBFTBIN) -o $@
 
 $(OBJECTS): $(LIBFTDIR)/$(LIBFTBIN)
+
+libft: $(LIBFTDIR)/$(LIBFTBIN)
 
 $(LIBFTDIR)/$(LIBFTBIN): 
   @make -C $(LIBFTDIR) all
