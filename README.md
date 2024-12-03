@@ -49,7 +49,7 @@ Project `passes` many of the 42 `testers`, including [franzinette](https://githu
 
 ## 🛠️ Build
 
-GNU `make`, `gcc` nad `ar` are required to build, compile and archive the project.
+GNU `make`, `gcc` and `ar` are required to build, compile and archive the project.
 
 ```bash
 git clone https://github.com/Jarnomer/libft.git libft
