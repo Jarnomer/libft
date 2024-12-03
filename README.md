@@ -43,7 +43,7 @@ It is complemented by `additional`, mostly `string` and `print` based functional
 
 `Bonus` which is centered around `linked lists` is also integrated into the library.
 
-[ft_printf](https://github.com/Jarnomer/printf) and [gnl](https://github.com/Jarnomer/gnl) are combined to the project as well alongside other `extra` functions.
+[ft_printf](https://github.com/Jarnomer/ft_printf) and [gnl](https://github.com/Jarnomer/gnl) are combined to the project as well alongside other `extra` functions.
 
 Project `passes` many of the 42 `testers`, including [franzinette](https://github.com/xicodomingues/francinette) `strict`.
 
