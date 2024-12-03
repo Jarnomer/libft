@@ -76,7 +76,7 @@ int main(void)
 ```
 
 ```bash
-cc main.c libft.a -o my_program
+gcc main.c libft.a -o my_program
 ```
 
 Here is an example how to implement `libft` into your `Makefile`.
