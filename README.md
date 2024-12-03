@@ -21,7 +21,6 @@
 <div align="center">
 
 ## Table of Contents
-[⚠️ Notice](#-notice)
 [📝 General](#-general)
 [🛠️ Build](#️-build)
 [⚡ Usage](#-usage)
