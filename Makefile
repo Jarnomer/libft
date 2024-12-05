@@ -115,6 +115,12 @@ $(NAME): $(OBJECTS)
 re: fclean
 	make all
 
+nm:
+	$(foreach d, $(HEADERDIR), $(foreach h, $(wildcard $(d)/*), \
+		norminette -R CheckDefine $(h);))
+	$(foreach d, $(SOURCEDIR), $(foreach s, $(wildcard $(d)/*), \
+		norminette -R CheckForbiddenSourceHeader $(s);))
+
 # **************************************************************************** #
 #    BUILD
 # **************************************************************************** #
@@ -173,7 +179,7 @@ $(foreach build, $(BUILDDIR), $(eval $(call build_cmd, $(build))))
 #    PHONY
 # **************************************************************************** #
 
-.PHONY: all bonus re
+.PHONY: all re nm
 .PHONY: clean fclean
 
 .SILENT:
