@@ -1,5 +1,5 @@
 <h1 align="center">
-  <b>libft</b>
+  <img src="assets/libft.png" alt="libft">
 </h1>
 
 <p align="center">
