@@ -50,7 +50,7 @@ If you want to see the version used for school evaluation, check `eval` branch.
 GNU `make`, `gcc` and `ar` are required to build, compile and archive the project.
 
 ```bash
-git clone https://github.com/Jarnomer/libft.git libft
+git clone https://github.com/Jarnomer/libft.git
 ```
 
 ```bash
